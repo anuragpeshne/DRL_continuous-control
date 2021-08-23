@@ -13,7 +13,7 @@ BUFFER_SIZE = int(1e6)  # replay buffer size
 BATCH_SIZE = 128        # minibatch size
 GAMMA = 0.99            # discount factor
 TAU = 1e-3              # for soft update of target parameters
-LR_ACTOR = 1e-4         # learning rate of the actor 
+LR_ACTOR = 2e-4         # learning rate of the actor
 LR_CRITIC = 3e-4        # learning rate of the critic
 WEIGHT_DECAY = 0.0001   # L2 weight decay
 
@@ -47,8 +47,8 @@ class Agent():
 
         # Noise process
         # From D4PG paper: noise drawn from an Ornstein-Uhlenbeck process is unnecessary and did not add to perf
-        # TODO: add Gaussian noise
-        # self.noise = OUNoise(action_size, random_seed)
+        # We'll use np.random to add Gaussian noise
+        self.epsilon = 0.3
 
         # Replay memory is shared among all Agents
         self.memory = replay_buffer
@@ -70,8 +70,8 @@ class Agent():
         with torch.no_grad():
             action = self.actor_local(state).cpu().data.numpy()
         self.actor_local.train()
-        #if add_noise:
-        #    action += self.noise.sample()
+        if add_noise:
+            action += self.epsilon * np.random.normal(0, scale=1)
         return np.clip(action, -1, 1)
 
     def reset(self):
