@@ -22,12 +22,12 @@ Every entry in the action vector must be a number between -1 and 1.
 
 1. Install the pre-requisites using conda:
     ```
-conda env create --name drlnd_navigation --file=environment.yml
+    conda env create --name drlnd_navigation --file=environment.yml
     ```
 
 1. Create jupyter-notebook kernel
     ```
-python -m ipykernel install --user --name drlnd_navigation --display-name "drlnd_navigation"
+   python -m ipykernel install --user --name drlnd_navigation --display-name "drlnd_navigation"
     ```
     - Make sure to select kernel drlnd_navigation when executing jupyter-notebook
 
