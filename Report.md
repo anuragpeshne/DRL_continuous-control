@@ -67,6 +67,8 @@ It has two networks:
 ## Plot of Rewards
 ![DDPG Score Graph](./images/DDPG_score_graph.png "DDPG Score Graph")
 
+The agent took 204 episodes to solve the environment.
+
 ## Ideas for Future Work
 - Complete D4PG for multi agent environment.
 - Try implement PPO, A3C algorithm for multi agent environment
