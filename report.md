@@ -23,6 +23,7 @@ It has two networks:
 
 ### Model architectures
 - Actor
+
 | Layer | Input      | Output      |
 |-------|------------|-------------|
 | fc1   | state_size | 256         |
@@ -31,6 +32,7 @@ It has two networks:
 | fc3   | 128        | action_size |
 
 - Critic
+
 | Layer | Input             | Output |
 |-------|-------------------|--------|
 | fc1   | state_size        | 256    |
@@ -60,3 +62,5 @@ It has two networks:
 ## Plot of Rewards
 
 ## Ideas for Future Work
+- Complete D4PG for multi agent environment.
+- Try implement PPO, A3C algorithm for multi agent environment
