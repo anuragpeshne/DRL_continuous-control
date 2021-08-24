@@ -27,19 +27,18 @@ It has two networks:
 | Layer | Input      | Output      |
 |-------|------------|-------------|
 | fc1   | state_size | 256         |
-| bn1   | 256        | 256         |
-| fc2   | 256        | 128         |
+| bn1   | 128        | 128         |
+| fc2   | 128        | 128         |
 | fc3   | 128        | action_size |
 
 - Critic
 
 | Layer | Input             | Output |
 |-------|-------------------|--------|
-| fc1   | state_size        | 256    |
-| bn1   | 256               | 256    |
-| fc2   | 256 + action_size | 256    |
-| fc3   | 256               | 128    |
-| fc4   | 128               | 1      |
+| fc1   | state_size        | 128    |
+| bn1   | 128               | 128    |
+| fc2   | 128 + action_size | 128    |
+| fc3   | 128               | 1      |
 
 ## Change Log/Timeline
 1. Started with DDPG algorithm in Udacity's DRL repo for pendulum.
@@ -51,6 +50,12 @@ It has two networks:
     - Score improved to ~25 but not improving beyond it
 5. Added another hidden in Actor network
 6. Reduced `LR_ACTOR` to `1e-4`
+    - Average score not improving beyond ~26
+7. Reduced `LR_CRITIC` to `1e-4`
+8. Removed a hidden layer from critic.
+9. Fixed premature termination of episodes, from 600 -> 10,000
+    - I had adopted the starter code from some other project, that had max step size 700
+    - This was the reason that the average score was not crossing 25
 
 ### D4PG
 1. Started with the same baseline DDPG algorithm to start with multi agent environment.
