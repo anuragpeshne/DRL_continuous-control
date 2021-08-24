@@ -65,6 +65,7 @@ It has two networks:
     - Will comeback to this later
 
 ## Plot of Rewards
+![DDPG Score Graph](./images/DDPG_score_graph.png "DDPG Score Graph")
 
 ## Ideas for Future Work
 - Complete D4PG for multi agent environment.
