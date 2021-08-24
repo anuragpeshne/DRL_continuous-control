@@ -13,10 +13,10 @@ Every entry in the action vector must be a number between -1 and 1.
 
 ## Getting Started
 1. Download the environment from one of the links below. You need only select the environment that matches your operating system:
-    - Linux: click here
-    - Mac OSX: click here
-    - Windows (32-bit): click here
-    - Windows (64-bit): click here
+    - Linux: [(click here)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
+    - Mac OSX: [(click here)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher.app.zip)
+    - Windows (32-bit): [(click here)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86.zip)
+    - Windows (64-bit): [(click here)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Windows_x86_64.zip)
 
     Place the file in the `unity_env_single_agent/` folder, and unzip (or decompress) the file.
 
